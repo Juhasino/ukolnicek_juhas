@@ -1,0 +1,97 @@
+/*  Základ  */
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f6;
+  color: #222;
+  margin: 0;
+  padding: 30px 15px;
+}
+
+/*  Bílá karta uprostřed  */
+h1, h2, form, #error, ul {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 { text-align: center; color: #3b4cca; }
+h2 { margin-top: 30px; }
+
+/*  Formulář */
+form {
+  display: flex;
+  gap: 8px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+select {
+  padding: 10px;
+  border: 1px solid #ccd;
+  border-radius: 6px;
+  background: #fff;
+}
+button[type="submit"] {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #3b4cca;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button[type="submit"]:hover { background: #2d3ba3; }
+
+/* Chyba  */
+#error { color: #c0392b; min-height: 1.2em; margin-top: 10px; }
+
+/*  Seznam úkolů  */
+ul { list-style: none; padding: 0; }
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.text { flex: 1; word-break: break-word; }
+.done .text { text-decoration: line-through; color: #999; }
+
+/* Barevné priority  */
+.priority {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+.priority.nizka { background: #27ae60; }
+.priority.stredni { background: #e69b00; }
+.priority.vysoka { background: #d63031; }
+
+/*  Tlačítko Smazat */
+.delete {
+  padding: 6px 12px;
+  border: 1px solid #d63031;
+  border-radius: 6px;
+  background: #fff;
+  color: #d63031;
+  cursor: pointer;
+}
+.delete:hover { background: #d63031; color: #fff; }
+
+/*  Mobil  */
+@media (max-width: 500px) {
+  form { flex-direction: column; }
+  li { flex-wrap: wrap; }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ukolnicek",
+  "version": "1.0.0",
+  "description": "Jednoduchý úkolníček - Express + MongoDB (Mongoose)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
